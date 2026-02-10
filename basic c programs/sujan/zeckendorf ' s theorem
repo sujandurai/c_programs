@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+void zen(int arr[],int n,int a);
+int main()
+{
+    int n;
+    scanf("%d",&n);
+    int a;
+    scanf("%d",&a);
+    int arr[100];
+    for(int i=0;i<a;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    zen(arr,n,a);
+}
+void zen(int arr[],int n,int a)
+{
+    int sum=0;
+    int dup=n;
+    
+    for(int i=0;i<a;i++)
+    {
+        int diff=0;
+        if(dup>=arr[i])
+        {
+            sum=sum+arr[i];
+            diff=n-sum;
+            dup=diff;
+            printf("%d\n",arr[i]);
+            
+        }
+    }
+   
+}
