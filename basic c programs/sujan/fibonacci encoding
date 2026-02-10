@@ -1,0 +1,54 @@
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int arr[100]={0};
+int arr1[100]={0};
+int n;
+void fib(int a);
+int main()
+{
+    int a;
+    scanf("%d",&a);
+    fib(a);
+ 
+}
+
+void fib(int a)
+{
+    static int b=1,c=2;
+    int next=0;
+    
+    
+    if(a<b)
+    {
+    printf("%d",n);
+    printf("\n");
+    int dup=a;
+    int  sum=0;
+    for(int i=n-1;i>=0;i--)
+    {
+        int diff=0;
+        if(dup>=arr[i])
+        {
+        sum=sum+arr[i];
+        diff=dup-sum;
+        dup=diff;
+        arr1[i]=1;
+        
+        }
+    }
+     for(int i=n-1;i>=0;i--)
+    {
+        printf("%d",arr1[i]);
+    }
+    printf("1");
+    return ;
+    }
+     
+    arr[n++]=b;
+    next=b+c;
+    b=c;
+    c=next;
+  
+    fib(a);
+}
