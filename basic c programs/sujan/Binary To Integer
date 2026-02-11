@@ -1,15 +1,16 @@
+
 #include<stdio.h>
 #include<string.h>
 #include<ctype.h>
 int binary(char s[],int len);
 int main()
 {
-    char s[100];
-    fgets(s,sizeof(s),stdin);
-    s[strcspn(s,"\n")]='\0';
+     char s[100];
+     fgets(s,sizeof(s),stdin);
+     s[strcspn(s,"\n")]='\0';
     
-    int len=strlen(s);
-    printf("%d",binary(s,len));
+     int len=strlen(s);
+     printf("%d",binary(s,len));
 }
 
 int binary(char s[],int len)
